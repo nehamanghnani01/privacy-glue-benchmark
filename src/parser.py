@@ -37,7 +37,7 @@ TASKS = [
 @dataclass
 class ExperimentArguments:
     random_seed_iterations: int = field(
-        default=10, metadata={"help": "Number of random seed iterations to run"}
+        default=1, metadata={"help": "Number of random seed iterations to run"}
     )
     do_summarize: bool = field(
         default=False, metadata={"help": "Summarize over all random seeds"}

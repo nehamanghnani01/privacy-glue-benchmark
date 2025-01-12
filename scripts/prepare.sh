@@ -141,7 +141,7 @@ piextract() {
 
 # define main function
 main() {
-  policy_detection
+  # policy_detection
   privacy_qa
   policy_qa
   policy_ie
