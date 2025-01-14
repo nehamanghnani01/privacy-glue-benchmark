@@ -223,3 +223,35 @@ If you found PrivacyGLUE useful, we kindly ask you to cite our paper as follows:
   DOI =          {10.3390/app13063701}
 }
 ```
+
+## Run in HPRC 
+
+1. Login to HPRC environment 
+2. Move to scratch directory
+
+    cd $SCRATCH 
+
+3. Load required modules 
+
+    module load Anaconda3/2021.05 (for conda environment) 
+
+    module load CUDA/11.7.0
+
+4. Create conda env 
+
+    conda create --name <env_name>  
+
+5. Start env 
+
+     source activate <env_name>
+
+6. Follow the setup steps below to run this project (this is also mentioned in the Dependencies and Usage section above) 
+
+    pip install -r requirements.txt
+
+    bash scripts/prepare.sh
+    
+    bash scripts/run_privacy_glue.sh --cuda_visible_devices <device_id> \
+                                   --model_name_or_path <model_name> \
+                                   --task <task_name> \
+                                   --fp16
